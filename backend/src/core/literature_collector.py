@@ -144,37 +144,41 @@ class LiteratureCollector:
     
     async def _enrich_papers(self, papers: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Enrich papers with additional metadata and analysis using AI"""
-        enriched_papers = []
+        # enriched_papers = []
         
-        for paper in papers:
-            try:
-                # Skip papers that don't have basic information
-                if not paper.get('title') or not paper.get('abstract'):
-                    continue
+        # for paper in papers:
+        #     try:
+        #         # Skip papers that don't have basic information
+        #         if not paper.get('title') or not paper.get('abstract'):
+        #             continue
                 
-                prompt = f"""
-                Based on this paper:
-                Title: {paper['title']}
-                Abstract: {paper['abstract']}
+        #         prompt = f"""
+        #         Based on this paper:
+        #         Title: {paper['title']}
+        #         Abstract: {paper['abstract']}
                 
-                Provide the following in JSON format:
-                1. A list of 3-5 key topics covered
-                2. The main research contribution
-                3. Potential applications
-                Keep each response very brief.
-                """
+        #         Provide the following in JSON format:
+        #         1. A list of 3-5 key topics covered
+        #         2. The main research contribution
+        #         3. Potential applications
+        #         Keep each response very brief.
+        #         """
                 
-                enrichment = await self.ai_model.generate_text(prompt, temperature=0.3)
+        #         enrichment = await self.ai_model.generate_text(prompt, temperature=0.3)
                 
-                paper['enriched_metadata'] = enrichment
+        #         paper['enriched_metadata'] = enrichment
                 
-                # Add relevance score (placeholder for future implementation)
-                paper['relevance_score'] = 1.0
+        #         # Add relevance score (placeholder for future implementation)
+        #         paper['relevance_score'] = 1.0
                 
-                enriched_papers.append(paper)
+        #         enriched_papers.append(paper)
                 
-            except Exception as e:
-                print(f"Error enriching paper {paper.get('title')}: {str(e)}")
-                enriched_papers.append(paper)  
+        #     except Exception as e:
+        #         print(f"Error enriching paper {paper.get('title')}: {str(e)}")
+        #         enriched_papers.append(paper)  
+        
+        
+        #  LMFAO THAT IMPLEMENTATION breaks the API bruh
+        return papers
                 
-        return enriched_papers
+        # return enriched_papers
