@@ -1,0 +1,12 @@
+google-generativeai 
+fastapi 
+uvicorn 
+pydantic 
+python-dotenv 
+aiohttp 
+beautifulsoup4 
+lxml
+markdown
+weasyprint
+python-multipart
+uvicorn[standard]
