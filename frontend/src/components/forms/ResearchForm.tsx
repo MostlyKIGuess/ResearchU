@@ -80,6 +80,7 @@ export function ResearchForm({
 
       <div className="mb-6">
         <label className="block text-sm font-medium mb-1">Model</label>
+        <p className='text-xs zinc-400 '> pls be nice and use flash, I don&apos;t have a bank to run API calls for you</p>
         <div className="flex items-center">
           <select
             className="w-full bg-zinc-900 border border-zinc-700 rounded p-2 text-white"

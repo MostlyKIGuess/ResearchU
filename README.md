@@ -3,7 +3,7 @@
 ResearchU is an AI-powered platform that automates scientific research workflows, from literature review to paper writing. It leverages large language models to collect relevant papers, identify research gaps, design and implement algorithms, and generate complete research papers. 
 
 ### Note: 
-- This is for fun, and it might give you some ideas coz it scares research papers but do not use AI in your actual research lmao.
+- This is for fun, and it might give you some ideas coz it scrapes research papers but do not use AI in your actual research lmao.
 
 ![ResearchU Banner](frontend/public/researchu.jpg)
 
